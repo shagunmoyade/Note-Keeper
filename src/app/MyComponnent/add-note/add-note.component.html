@@ -1,0 +1,21 @@
+
+<div class="container">
+
+
+<h1 class="text-center">Add Your Note Here</h1>
+
+
+<form (ngSubmit)="onsubmit()">
+  <div class="form-group">
+    <label for="title"><strong>Note Title</strong></label>
+    <input type="text"  [(ngModel)]="title" class="form-control" id="title" name="title"   placeholder="Enter Title">
+
+  </div>
+  <div class="form-group">
+    <label for="des"><strong>Note Description</strong></label>
+    <input type="text" [(ngModel)]="des" class="form-control" id="des" name="des"  placeholder="Enter Description">
+  </div>
+
+  <button type="submit" class="btn btn-dark btnn">Add  Note</button>
+</form>
+</div>

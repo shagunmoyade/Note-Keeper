@@ -1,0 +1,16 @@
+
+<app-add-note (noteAdd)="addNote($event)"></app-add-note>
+<div class="container text-center heading">
+  <h2>Your Note's</h2>
+</div>
+
+
+<div *ngIf="this.notes.length===0; else elseBlock" class="text-center N"><strong>No Notes To Display!</strong></div>
+<ng-template #elseBlock>
+
+
+<div class="container text-center"  *ngFor="let note of notes">
+<app-note-list [note]="note"  (noteDelete)="deletenote($event)"></app-note-list>
+
+</div>
+</ng-template>
